@@ -45,7 +45,7 @@ client.on('message', message =>{
         client.commands.get('support').execute(message, args);
     }
     if(command === 'link'){
-        client.commands.get('dontlinklikethat').execute(message, args);
+        client.commands.get('linked').execute(message, args);
     }
 });
 
