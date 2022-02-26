@@ -11,7 +11,7 @@ const prefix = '-';
 const token = 'OTQ2ODc3MTIyNzE3Mjk0Njky.YhlGCg.Bmg1Yad45VoayO_KBA85sxjWj3U';
 
 client.on('ready', () => { 
-    console.log('This bot is online!'); 
+    console.log('Running...'); 
 });
 
 client.on('message', message =>{
@@ -25,6 +25,7 @@ client.on('message', message =>{
     }
     if(command === 'whineymonkey10'){
         message.channel.send('<@712640311519608943> is pro.')
+        console.log('WhineyMonkey10s command got executed!')
     }
     if(command === 'hogefoot'){
         message.channel.send('<@467043574479847435> is pro')
