@@ -12,6 +12,7 @@ const token = 'OTQ2ODc3MTIyNzE3Mjk0Njky.YhlGCg.Bmg1Yad45VoayO_KBA85sxjWj3U';
 
 client.on('ready', () => { 
     console.log('Running...'); 
+    console.log("STARTED");
 });
 
 client.on('message', message =>{
@@ -29,6 +30,9 @@ client.on('message', message =>{
     }
     if(command === 'hogefoot'){
         message.channel.send('<@467043574479847435> is pro')
+    }
+    if(command === 'support'){
+        message.channel.send('To receive support you may create a ticket and wait for our staff team to respond.')
     }
 });
 
