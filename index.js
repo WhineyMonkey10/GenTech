@@ -36,20 +36,20 @@ client.on('message', message =>{
         client.commands.get('ping').execute(message, args);
      }
     
-    if(command === 'e'){
+   else  if(command === 'e'){
         client.commands.get('linked').execute(message, args);
     }
     
-    if(command === 'whineymonkey10'){
+    else if(command === 'whineymonkey10'){
         client.commands.get('whineymonkey10').execute(message, args);
     }
-    if(command === 'hogefoot'){
+    else if(command === 'hogefoot'){
         client.commands.get('hogefoot').execute(message, args);
     }
-    if(command === 'support'){
+    else if(command === 'support'){
         client.commands.get('support').execute(message, args);
     }
-    if(command === 'sklei'){
+    else if(command === 'sklei'){
         client.commands.get('sklei').execute(message, args);
     }
 });
