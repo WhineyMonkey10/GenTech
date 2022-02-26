@@ -36,7 +36,7 @@ client.on('message', message =>{
         client.commands.get('ping').execute(message, args);
      }
     
-    if(command === 'link'){
+    if(command === 'e'){
         client.commands.get('linked').execute(message, args);
     }
     
