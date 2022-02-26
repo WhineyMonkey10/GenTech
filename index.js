@@ -37,7 +37,9 @@ client.on('message', message =>{
      }
     
    else  if(command === 'e'){
-        client.commands.get('linked');execute(message, args);
+         console.log(client.commands.get("linked"))
+
+        client.commands.get('linked').execute(message, args);
     }
     
     else if(command === 'whineymonkey10'){
