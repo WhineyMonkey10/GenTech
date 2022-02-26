@@ -49,6 +49,9 @@ client.on('message', message =>{
     if(command === 'support'){
         client.commands.get('support').execute(message, args);
     }
+    if(command === 'sklei'){
+        client.commands.get('sklei').execute(message, args);
+    }
 });
 
 client.login(token);
