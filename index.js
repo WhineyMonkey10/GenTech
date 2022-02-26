@@ -8,6 +8,17 @@ const client = new Discord.Client({
 
 const prefix = '-';
 
+const fs = require('fs');
+
+client.commands = new Discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+
+    client.commands.set(command.name, command)
+}
+
 const token = 'OTQ2ODc3MTIyNzE3Mjk0Njky.YhlGCg.Bmg1Yad45VoayO_KBA85sxjWj3U';
 
 client.on('ready', () => { 
@@ -22,17 +33,16 @@ client.on('message', message =>{
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
-        message.channel.send('pong!');
-    }
+        client.commands.get('ping').execute(message, args);
+     }
     if(command === 'whineymonkey10'){
-        message.channel.send('<@712640311519608943> is pro.')
-        console.log('WhineyMonkey10s command got executed!')
+        client.commands.get('whineymonkey10').execute(message, args);
     }
     if(command === 'hogefoot'){
-        message.channel.send('<@467043574479847435> is pro')
+        client.commands.get('hogefoot').execute(message, args);
     }
     if(command === 'support'){
-        message.channel.send('To receive support you may create a ticket and wait for our staff team to respond.')
+        client.commands.get('support').execute(message, args);
     }
 });
 
