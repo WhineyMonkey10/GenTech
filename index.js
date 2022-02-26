@@ -35,6 +35,11 @@ client.on('message', message =>{
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
      }
+    
+    if(command === 'link'){
+        client.commands.get('linked').execute(message, args);
+    }
+    
     if(command === 'whineymonkey10'){
         client.commands.get('whineymonkey10').execute(message, args);
     }
@@ -43,9 +48,6 @@ client.on('message', message =>{
     }
     if(command === 'support'){
         client.commands.get('support').execute(message, args);
-    }
-    if(command === 'link'){
-        client.commands.get('linked').execute(message, args);
     }
 });
 
