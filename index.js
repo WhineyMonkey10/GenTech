@@ -53,6 +53,8 @@ client.on('message', message =>{
             client.commands.get('alphx').execute(message, args)
         } else if(command === 'bee'){
             client.commands.get('bee').execute(message, args)
+        } else if(command === 'isskleiaskeleton'){
+            client.commands.get('isskleiaskele').execute(message, args)
         }
     });
 
