@@ -14,7 +14,7 @@ client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
-    const command = require(`./commands/${file}`);
+    const command = require(`../commands/${file}`);
 
     client.commands.set(command.name, command)
 }
@@ -36,13 +36,12 @@ client.on('message', message =>{
         client.commands.get('ping').execute(message, args);
      }
     
-   else  if(command === 'e'){
+    if(command === 'e'){
          console.log(client.commands.get("linked"))
-
         client.commands.get('linked').execute(message, args);
     }
     
-    else if(command === 'whineymonkey10'){
+    if(command === 'whineymonkey10'){
         client.commands.get('whineymonkey10').execute(message, args);
     }
     else if(command === 'hogefoot'){
