@@ -57,6 +57,8 @@ client.on('message', message =>{
             client.commands.get('skleiskel').execute(message, args)
         } else if(command === 'mute'){
             client.commands.get('mute').execute(message, args)
+        } else if(command === 'unmute'){
+            client.commands.get('unmute').execute(message, args)
         }
     });
 
