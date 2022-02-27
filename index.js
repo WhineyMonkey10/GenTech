@@ -60,7 +60,7 @@ client.on('message', message =>{
         } else if(command === 'unmute'){
             client.commands.get('unmute').execute(message, args)
         } else if(command === 'ticket'){
-            client.commands.get('ticket').async.execute(message, args, cmd, client, Discord)
+            client.commands.get('ticket').async.message, args, cmd, client, Discord
         }
     });
 
