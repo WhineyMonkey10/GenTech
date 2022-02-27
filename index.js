@@ -19,7 +19,7 @@ for(const file of commandFiles){
     client.commands.set(command.name, command)
 }
 
-const token = 'token';
+const token = 'OTQ2ODc3MTIyNzE3Mjk0Njky.YhlGCg.Bmg1Yad45VoayO_KBA85sxjWj3U';
 
 client.on('ready', () => { 
     console.log('Running...'); 
