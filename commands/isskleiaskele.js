@@ -1,7 +1,7 @@
 module.exports ={
-    name: 'skleiskeleton',
-    description: 'bones',
+    name: 'skleiskel',
+    description: 'bonesss',
     execute(message, args){
-        message.channel.send('Yes.');
+        message.channel.send('Yes Sklei is a skeleton.');
     }
 }
