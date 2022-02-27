@@ -1,6 +1,6 @@
 module.exports ={
     name: 'kick',
-    description: 'Kick a user from the guild.',
+    description: 'Kicks a user from the guild.',
     execute(message, args){
        
         if(message.member.roles.cache.has('840967211278532648')){
