@@ -40,9 +40,11 @@ client.on('message', message =>{
             client.commands.get('whineymonkey10').execute(message, args);
         } else if(command === 'hogefoot'){
             client.commands.get('hogefoot').execute(message, args);
-        } else if(command ==- 'support'){
+        } else if(command === 'support'){
             client.commands.get('support').execute(message, args)
-        } 
+        } else if(command === 'sklei'){
+            client.commands.get('sklei').execute(message, args)
+        }
 });
 
 client.login(token);
