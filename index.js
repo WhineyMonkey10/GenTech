@@ -51,7 +51,9 @@ client.on('message', message =>{
             client.commands.get('ban').execute(message, args)
         } else if(command === 'alphx'){
             client.commands.get('alphx').execute(message, args)
+        } else if(command === 'bee'){
+            client.commands.get('bee').execute(message, args)
         }
-});
+    });
 
 client.login(token);
