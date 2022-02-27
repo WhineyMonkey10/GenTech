@@ -19,7 +19,7 @@ for(const file of commandFiles){
     client.commands.set(command.name, command)
 }
 
-const token = 'OTQ2ODc3MTIyNzE3Mjk0Njky.YhlGCg.Bmg1Yad45VoayO_KBA85sxjWj3U';
+const token = 'token';
 
 client.on('ready', () => { 
     console.log('Running...'); 
@@ -34,25 +34,15 @@ client.on('message', message =>{
 
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
-     }
-    
-    if(command === 'e'){
-         console.log(client.commands.get("linked"))
-        client.commands.get('linked').execute(message, args);
-    }
-    
-    if(command === 'whineymonkey10'){
-        client.commands.get('whineymonkey10').execute(message, args);
-    }
-    else if(command === 'hogefoot'){
-        client.commands.get('hogefoot').execute(message, args);
-    }
-    else if(command === 'support'){
-        client.commands.get('support').execute(message, args);
-    }
-    else if(command === 'sklei'){
-        client.commands.get('sklei').execute(message, args);
-    }
+        } else if(command === 'e'){
+            client.commands.get('linked').execute(message, args);
+        } else if(command === 'whineymonkey10'){
+            client.commands.get('whineymonkey10').execute(message, args);
+        } else if(command === 'hogefoot'){
+            client.commands.get('hogefoot').execute(message, args);
+        } else if(command ==- 'support'){
+            client.commands.get('support').execute(message, args)
+        } 
 });
 
 client.login(token);
