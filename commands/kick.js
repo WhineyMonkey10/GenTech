@@ -3,7 +3,7 @@ module.exports ={
     description: 'Kicks a user from the guild.',
     execute(message, args){
     const staffroles = ('840967211278532648', '840967210365485078', '840980700613836801', '840967209354264627', '840967208896167996', '840967208200175636', '840967212039012393')
-        if(message.member.roles.cache.has('840967211278532648')){
+        if(message.member.roles.cache.has(staffroles)){
             const member = message.mentions.users.first();
             if(member){
                 const memberTarget = message.guild.members.cache.get(member.id);
