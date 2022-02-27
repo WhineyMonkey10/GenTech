@@ -2,8 +2,8 @@ module.exports ={
     name: 'ban',
     description: 'Bans a user from the guild.',
     execute(message, args){
-       
-        if(message.member.roles.cache.has('840967211278532648')){
+    const staffroles = ('840967211278532648', '840967212039012393')
+        if(message.member.roles.cache.has(staffroles)){
             const member = message.mentions.users.first();
             if(member){
                 const memberTarget = message.guild.members.cache.get(member.id);
