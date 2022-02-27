@@ -1,3 +1,4 @@
+const { AsyncResource } = require('async_hooks');
 const Discord = require('discord.js');
 const client = new Discord.Client({
     intents: [
@@ -44,6 +45,10 @@ client.on('message', message =>{
             client.commands.get('support').execute(message, args)
         } else if(command === 'sklei'){
             client.commands.get('sklei').execute(message, args)
+        } else if(command === 'kick'){
+            client.commands.get('kick').execute(message, args)
+        } else if(command === 'ban'){
+            client.commands.get('ban').execute(message, args)
         }
 });
 
