@@ -2,7 +2,7 @@ module.exports ={
     name: 'ban',
     description: 'Bans a user from the guild.',
     execute(message, args){
-    const staffids = ('840967208200175636', '840967208896167996', '840967209354264627', '840967210365485078', '840967211278532648', '840980700613836801')
+    const staffids = ('840967208200175636', '840967208896167996', '840967209354264627', '840980700613836801', '840967210365485078', '840967211278532648')
         if(message.member.roles.cache.has(staffids)){
             const member = message.mentions.users.first();
             if(member){
