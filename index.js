@@ -7,7 +7,10 @@ const client = new Discord.Client({
     ]
 });
 
+
+const mongoose = require('mongoose')
 const prefix = '-';
+require("dotenv").config();
 
 const fs = require('fs');
 
@@ -19,6 +22,17 @@ for(const file of commandFiles){
 
     client.commands.set(command.name, command)
 }
+
+mongoose.connect(process.env.MONGODB_SRV, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    userFindAndModify: false
+
+}).then(()=>{
+    console.log('Connected to database.');
+}).catch((err) =>{
+    console.log(err);
+});
 
 const token = 'OTQ2ODc3MTIyNzE3Mjk0Njky.YhlGCg.Bmg1Yad45VoayO_KBA85sxjWj3U';
 
