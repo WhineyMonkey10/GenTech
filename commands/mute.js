@@ -30,6 +30,8 @@ module.exports = {
             } else {
                 message.channel.send('I could not find that member.');
             }
-        }}
+        }else{}
+            message.channel.send('You do not have sufficient permissions to execute this command.')
+        }
 
 }

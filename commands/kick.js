@@ -13,7 +13,7 @@ module.exports ={
                 message.channel.send('Please specicify a member.')
             }
         } else{
-            message.channel.send('You do not have sufficient permissions to execute this command')
+            message.channel.send('You do not have sufficient permissions to execute this command.')
         }
 
 
