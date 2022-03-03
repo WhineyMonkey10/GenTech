@@ -36,6 +36,7 @@ client.on('guildMemberAdd', guildMember => {
     let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Member');
 
     guildMember.roles.add(welcomeRole);
+    guildMember.guild.channels.cache.get('851559174722027542').send(`Welcome <${guildMember.user.id}> to GenTech.`)
 });
 
 
