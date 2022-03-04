@@ -1,7 +1,7 @@
 module.exports ={
-    name: 'ping',
-    description: 'This is a ping command.',
+    name: 'syco',
+    description: 'Command for syco.',
     execute(message, args){
-        message.channel.send('Pong!');
+        message.channel.send('<@946455825684258857> is the best and should get his mod back.');
     }
 }
