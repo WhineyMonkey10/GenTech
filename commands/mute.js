@@ -36,7 +36,7 @@ module.exports = {
             console.log('Mute worked!');
         }
            else{
-            message.channel.send('You do not have sufficient permissions to execute this command. If you are a staff member, I beleive this message is an error, please ignore it for now.')
+            message.channel.send('You do not have sufficient permissions to execute this command.')
            }
             
              
