@@ -74,7 +74,7 @@ client.on('message', message =>{
         } else if(command === 'unmute'){
             client.commands.get('unmute').execute(message, args)
         } else if(command === 'syco'){
-            client.commands.get('ticket').execute(message, args)
+            client.commands.get('syco').execute(message, args)
         }
     });
 
