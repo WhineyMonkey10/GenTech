@@ -1,3 +1,4 @@
+const { channel } = require('diagnostics_channel');
 const ms = require('ms');
 module.exports = {
     name: 'mute',
@@ -30,8 +31,18 @@ module.exports = {
             } else {
                 message.channel.send('I could not find that member.');
             }
-        }else{}
-            message.channel.send('You do not have sufficient permissions to execute this command.')
+        }else{ 
+            if(message.member.roles.cache.has(staffrolesmute)){
+            console.log('Mute worked!');
+        }
+           else{
+            message.channel.send('You do not have sufficient permissions to execute this command. If you are a staff member, I beleive this message is an error, please ignore it for now.')
+           }
+            
+             
+            
+             }
+            
         }
 
     }
