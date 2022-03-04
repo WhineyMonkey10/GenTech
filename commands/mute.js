@@ -13,25 +13,27 @@ module.exports = {
     
                 let memberTarget = message.guild.members.cache.get(target.id);
     
-                if (!args[1]) {
-                    memberTarget.roles.remove(mainRole.id);
-                    memberTarget.roles.add(muteRole.id);
-                    message.channel.send(`<@${memberTarget.user.id}> has been muted.`);
-                    return
-                }
+        if(message.member.cache.has(staffrolesmute)){
+            if (!args[1]) {
                 memberTarget.roles.remove(mainRole.id);
                 memberTarget.roles.add(muteRole.id);
-                message.channel.send(`<@${memberTarget.user.id}> has been muted for ${ms(ms(args[1]))}.`);
-    
-                setTimeout(function () {
-                    memberTarget.roles.remove(muteRole.id);
-                    memberTarget.roles.add(mainRole.id);
-                }, ms(args[1]));
-            } else {
-                message.channel.send('I could not find that member.');
+                message.channel.send(`<@${memberTarget.user.id}> has been muted.`);
+                return
             }
-        }else{}
-            message.channel.send('You do not have sufficient permissions to execute this command.')
+            memberTarget.roles.remove(mainRole.id);
+            memberTarget.roles.add(muteRole.id);
+            message.channel.send(`<@${memberTarget.user.id}> has been muted for ${ms(ms(args[1]))}.`);
+
+            setTimeout(function () {
+                memberTarget.roles.remove(muteRole.id);
+                memberTarget.roles.add(mainRole.id);
+            }, ms(args[1]));
+        } else {
+            message.channel.send('I could not find that member.');
         }
+    }else{}
+        message.channel.send('You do not have sufficient permissions to execute this command.')
+    }
+        }     
 
 }
