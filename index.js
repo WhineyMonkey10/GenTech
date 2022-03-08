@@ -33,7 +33,7 @@ client.on('ready', () => {
 
 
 client.on('guildMemberAdd', guildMember => {
-    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Member');
+    let welcomeRole = guildMember.guild.roles.find(role => role.name === 'Member');
 
     guildMember.roles.add(welcomeRole);
     guildMember.guild.channels.cache.get('947235521757847604').send(`Welcome <${guildMember.user.id}> to Shield Network.`)
