@@ -24,7 +24,7 @@ for(const file of commandFiles){
 }
 
 
-const token = 'OTQ2ODc3MTIyNzE3Mjk0Njky.YhlGCg.Bmg1Yad45VoayO_KBA85sxjWj3U';
+const token = 'token';
 
 client.on('ready', () => { 
     console.log('Running...'); 
